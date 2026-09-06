@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <!-- Database Cylinder -->
+  <ellipse cx="40" cy="35" rx="22" ry="9" fill="#FEE2E2" stroke="#EF4444" stroke-width="3.5"/>
+  <path d="M18 35v20c0 5 9.8 9 22 9s22-4 22-9V35" fill="#FEE2E2" stroke="#EF4444" stroke-width="3.5"/>
+  <path d="M18 55v20c0 5 9.8 9 22 9s22-4 22-9V55" fill="#FEE2E2" stroke="#EF4444" stroke-width="3.5"/>
+  <!-- Master Gear -->
+  <circle cx="68" cy="45" r="14" fill="#FEF2F2" stroke="#DC2626" stroke-width="3.5"/>
+  <circle cx="68" cy="45" r="5" fill="#DC2626"/>
+  <path d="M68 26v5m0 28v5m-19-19h5m28 0h5m-15-13l3.5 3.5m-20 20l3.5 3.5m0-27l-3.5 3.5m20 20l-3.5 3.5" stroke="#DC2626" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

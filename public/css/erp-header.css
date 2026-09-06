@@ -1,0 +1,415 @@
+:root {
+    --header-primary: #1565a8;
+    --header-border: #d7e4f0;
+    --header-text: #2f3f52;
+    --header-muted: #64748b;
+    --header-height: 52px;
+}
+
+.erp-body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #edf5fc;
+    color: var(--header-text);
+}
+
+.erp-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid var(--header-border);
+    box-shadow: 0 2px 12px rgba(21, 101, 168, 0.06);
+}
+
+.erp-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    min-height: var(--header-height);
+    padding: 6px 18px;
+    max-width: 100%;
+}
+
+.erp-col {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.erp-col-left {
+    flex: 1 1 34%;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.erp-col-center {
+    flex: 0 0 280px;
+    justify-content: center;
+}
+
+.erp-col-right {
+    flex: 1 1 34%;
+    gap: 8px;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.erp-menu-btn {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.erp-menu-btn span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #334155;
+    border-radius: 1px;
+}
+
+.erp-brand {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.erp-brand-logo {
+    height: 30px;
+    width: auto;
+    object-fit: contain;
+}
+
+.erp-school-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.erp-school-short {
+    color: var(--header-muted);
+    font-weight: 500;
+}
+
+.erp-search-wrap {
+    position: relative;
+    width: 280px;
+    max-width: 100%;
+}
+
+.erp-search-input {
+    width: 100%;
+    height: 32px;
+    border: 1px solid #7ec8ea;
+    border-radius: 999px;
+    padding: 0 38px 0 14px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #475569;
+    outline: none;
+    background: #fff;
+}
+
+.erp-search-input::placeholder {
+    color: #94a3b8;
+}
+
+.erp-search-input:focus {
+    border-color: var(--header-primary);
+    box-shadow: 0 0 0 3px rgba(21, 101, 168, 0.1);
+}
+
+.erp-search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: #64748b;
+    pointer-events: none;
+}
+
+.erp-search-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.ticode_list {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #dbe7f2;
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgba(21, 101, 168, 0.14);
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 1200;
+}
+
+.search_tcode_data {
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+}
+
+.search_tcode_data li {
+    margin: 0;
+}
+
+.tcode_link {
+    display: block;
+    padding: 9px 12px;
+    color: #334155;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.tcode_link:hover {
+    background: #f0f7fd;
+    color: var(--header-primary);
+}
+
+.erp-notify-btn {
+    position: relative;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    cursor: pointer;
+    padding: 0;
+}
+
+.erp-notify-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.erp-notify-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    min-width: 15px;
+    height: 15px;
+    padding: 0 3px;
+    border-radius: 999px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 9px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.erp-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: var(--header-muted);
+    white-space: nowrap;
+}
+
+.erp-chip label {
+    font-weight: 500;
+    color: #64748b;
+}
+
+.erp-header-select {
+    border: none;
+    background: transparent;
+    color: #0f172a;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    padding: 0 14px 0 2px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%2364748b' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.erp-unit-select {
+    min-width: 68px;
+    max-width: 118px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#erp-session-select {
+    min-width: 48px;
+    max-width: 64px;
+}
+
+.erp-user-item {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.erp-user-btn {
+    border: none;
+    background: transparent;
+    color: #0f172a;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 0 2px;
+    white-space: nowrap;
+}
+
+.erp-caret {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.erp-user-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 130px;
+    background: #fff;
+    border: 1px solid #dbe7f2;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(21, 101, 168, 0.12);
+    overflow: hidden;
+    z-index: 1200;
+}
+
+.erp-user-menu button {
+    width: 100%;
+    border: none;
+    background: #fff;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 13px;
+    cursor: pointer;
+    color: #334155;
+}
+
+.erp-user-menu button:hover {
+    background: #f0f7fd;
+    color: var(--header-primary);
+}
+
+.erp-school-logo-wrap {
+    flex-shrink: 0;
+    width: 46px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+}
+
+.erp-school-logo {
+    max-width: 46px;
+    max-height: 36px;
+    object-fit: contain;
+}
+
+.erp-school-logo-fallback {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+    color: var(--header-primary);
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #bfdbfe;
+}
+
+.erp-header-meta {
+    display: none;
+    padding: 0 18px 8px;
+    border-top: 1px solid #f1f5f9;
+    background: #fafcff;
+}
+
+.erp-meta-unit {
+    display: block;
+    font-size: 11px;
+    color: var(--header-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 1100px) {
+    .erp-header-inner {
+        flex-wrap: wrap;
+        padding-bottom: 8px;
+    }
+
+    .erp-col-left {
+        flex: 1 1 100%;
+        order: 1;
+    }
+
+    .erp-col-center {
+        flex: 1 1 auto;
+        order: 3;
+        justify-content: flex-start;
+    }
+
+    .erp-col-right {
+        flex: 1 1 auto;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .erp-search-wrap {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .erp-header-meta {
+        display: block;
+    }
+}
+
+@media (max-width: 720px) {
+    .erp-col-right {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 6px;
+    }
+
+    .erp-school-name {
+        max-width: calc(100vw - 180px);
+    }
+
+    .erp-chip label {
+        display: none;
+    }
+}
