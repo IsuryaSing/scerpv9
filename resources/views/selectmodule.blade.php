@@ -11,14 +11,13 @@
         <div class="module-page">
             <div class="module-title-bar">
                 <h1>ERP Modules</h1>
-                <p>Select a module to continue</p>
             </div>
 
             <main class="module-content">
                 @if (count($modules))
                     <div class="module-grid">
                         @foreach ($modules as $module)
-                            <a href="#" class="module-card module-card--{{ strtolower($module['code']) }}" data-module="{{ $module['code'] }}">
+                            <a href="{{ route('module.activate', $module['code']) }}" class="module-card module-card--{{ strtolower($module['code']) }}" data-module="{{ $module['code'] }}">
                                 <div class="module-icon">
                                     <img src="{{ $module['logo'] }}" alt="{{ $module['label'] }}">
                                 </div>
