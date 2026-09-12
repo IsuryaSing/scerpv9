@@ -1,8 +1,6 @@
 {
   "name": "scerpv9 Laravel Dev",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/workspaces/scerpv9",
+  "image": "mcr.microsoft.com/devcontainers/php:1-8.2-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "20"
@@ -12,14 +10,14 @@
   "portsAttributes": {
     "8000": {
       "label": "Laravel App",
-      "onAutoForward": "openPreview"
+      "onAutoForward": "openBrowser"
     },
     "5173": {
       "label": "Vite",
       "onAutoForward": "silent"
     }
   },
-  "postCreateCommand": "composer install && npm install && cp -n .env.example .env && sed -i 's/^DB_HOST=.*/DB_HOST=db/' .env && sed -i 's/^DB_PORT=.*/DB_PORT=5432/' .env && sed -i 's/^DB_DATABASE=.*/DB_DATABASE=scerpv9/' .env && sed -i 's/^DB_USERNAME=.*/DB_USERNAME=scerpv9/' .env && sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=scerpv9_dev_password/' .env && sed -i 's/^DB_SCHEMA=.*/DB_SCHEMA=scerpv9/' .env && php artisan key:generate && php artisan config:clear",
+  "postCreateCommand": "composer install && npm install && cp -n .env.example .env && php artisan key:generate",
   "postStartCommand": "nohup php artisan serve --host=0.0.0.0 --port=8000 > /tmp/scerpv9-laravel.log 2>&1 &",
   "customizations": {
     "vscode": {
