@@ -413,3 +413,30 @@
         display: none;
     }
 }
+/* Neo workspace design system */
+:root { --ink:#0b1020; --ink-soft:#151d35; --canvas:#f6f8fc; --surface:#ffffff; --line:#e5eaf3; --muted:#69758c; --violet:#6857f5; --cyan:#11b9e7; --glow:rgba(104,87,245,.18); --header-height:72px; }
+.erp-body { font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink); background:var(--canvas); }
+.erp-header { background:rgba(255,255,255,.88); border-bottom:1px solid rgba(229,234,243,.9); box-shadow:0 8px 30px rgba(15,23,42,.05); backdrop-filter:blur(18px); }
+.erp-header-inner { min-height:var(--header-height); padding:10px 28px; gap:24px; }
+.erp-col-left { flex:1 1 35%; gap:14px; }.erp-col-center{flex:0 1 420px}.erp-col-right{flex:1 1 35%;gap:12px}
+.erp-menu-btn { width:38px;height:38px;border-radius:12px;background:#f1f3f9; transition:.2s ease; }.erp-menu-btn:hover{background:#e8e5ff}.erp-menu-btn span{width:17px;background:#28324b;border-radius:3px}
+.erp-brand-logo{height:34px}.erp-school-name{font-size:13px;font-weight:700;color:#1b2540;letter-spacing:-.01em}.erp-school-short{color:var(--muted)}
+.erp-search-wrap{width:100%}.erp-search-input{height:42px;border:1px solid #e3e7f0;border-radius:14px;padding:0 42px 0 16px;font-size:12px;letter-spacing:0;text-transform:none;background:#f7f8fc;color:#1b2540;transition:.2s}.erp-search-input:focus{background:#fff;border-color:#8b80fc;box-shadow:0 0 0 4px var(--glow)}.erp-search-icon{right:14px}.ticode_list{border-radius:14px;border:1px solid var(--line);box-shadow:0 20px 45px rgba(15,23,42,.16)}
+.erp-notify-btn{width:38px;height:38px;border-radius:12px;background:#f7f8fc;color:#536079}.erp-notify-badge{background:#ff5f79;border:2px solid #fff;top:2px;right:2px}.erp-chip{padding:7px 9px;border:1px solid #e7eaf2;border-radius:12px;background:#fff;font-size:11px}.erp-chip label{color:#7a8498}.erp-header-select,.erp-user-btn{font-size:12px;color:#26314c}.erp-user-btn{padding:8px 10px;border-radius:10px;background:#f7f8fc}.erp-school-logo-fallback{border:0;border-radius:12px;background:linear-gradient(135deg,#7060fa,#11b9e7);color:#fff}
+.erp-header-meta{background:#fff;border-top:0}.erp-body-app{background:var(--canvas)}
+@media(max-width:900px){.erp-header-inner{padding:10px 16px;gap:10px}.erp-col-left{flex:1 1 auto}.erp-col-center{order:3;flex:1 1 100%}.erp-col-right{order:2;flex:0 0 auto}.erp-search-wrap{max-width:none}.erp-chip{padding:6px}.erp-chip label,.erp-school-name{display:none}.erp-brand-logo{height:30px}}
+/* Compact header with collision-free controls */
+:root { --header-height: 58px; }
+.erp-header-inner { min-height: 58px; padding: 7px 20px; gap: 14px; }
+.erp-col-left { flex: 1 1 30%; }.erp-col-center { flex: 0 1 330px; min-width: 210px; }.erp-col-right { flex: 1 1 38%; min-width: 0; gap: 7px; }
+.erp-menu-btn, .erp-notify-btn { width: 34px; height: 34px; }.erp-brand-logo { height: 29px; }.erp-search-input { height: 36px; border-radius: 10px; }.erp-chip { padding: 6px 7px; }.erp-header-select { max-width: 112px; font-size: 11px; }.erp-user-btn { max-width: 105px; overflow: hidden; text-overflow: ellipsis; }.erp-school-logo-wrap { width:38px; height:32px; }.erp-school-logo { max-width:38px; max-height:32px; }
+@media (max-width: 1180px) { .erp-header-inner { display: grid; grid-template-columns: minmax(170px, 1fr) minmax(220px, 310px) minmax(315px, auto); }.erp-col-left, .erp-col-center, .erp-col-right { min-width: 0; margin: 0; }.erp-col-left { grid-column: 1; }.erp-col-center { grid-column: 2; }.erp-col-right { grid-column: 3; flex-wrap: nowrap; }.erp-chip label { display: none; }.erp-chip { border: 0; background: transparent; padding: 0; }.erp-header-meta { display: none; } }
+@media (max-width: 900px) { :root { --header-height: 104px; }.erp-header-inner { display: flex; flex-wrap: wrap; min-height: 104px; padding: 7px 14px; }.erp-col-left { flex: 1 1 auto; }.erp-col-right { flex: 0 1 auto; }.erp-col-center { order: 3; flex: 1 1 100%; min-width: 0; }.erp-search-wrap { max-width: none; }.erp-school-name { display: none; }.erp-chip { display: none; }.erp-user-btn { max-width: 92px; }.erp-header-meta { display: none; } }
+/* Extra-compact desktop header and half-width search. */
+:root { --header-height: 38px; }
+.erp-header-inner { min-height: 38px; padding: 4px 16px; gap: 9px; }
+.erp-menu-btn, .erp-notify-btn { width: 27px; height: 27px; }.erp-menu-btn { border-radius: 8px; }.erp-menu-btn span { width: 14px; }.erp-brand-logo { height: 23px; }.erp-school-name { font-size: 11px; }
+.erp-col-center { flex-basis: 165px; min-width: 150px; }.erp-search-wrap { width: 165px; }.erp-search-input { height: 28px; padding: 0 30px 0 10px; border-radius: 8px; font-size: 10px; }.erp-search-icon { right: 8px; width: 13px; height: 13px; }.erp-search-icon svg { width: 13px; height: 13px; }
+.erp-chip { font-size: 10px; }.erp-header-select, .erp-user-btn { font-size: 10px; }.erp-school-logo-wrap { width: 29px; height: 25px; }.erp-school-logo { max-width: 29px; max-height: 25px; }.erp-school-logo-fallback { width: 26px; height: 26px; font-size: 8px; }.erp-notify-badge { transform: scale(.8); transform-origin: top right; }
+@media (max-width: 1180px) { .erp-header-inner { grid-template-columns: minmax(135px, 1fr) 165px minmax(275px, auto); }.erp-col-center { min-width: 0; }.erp-search-wrap { width: 165px; } }
+@media (max-width: 900px) { :root { --header-height: 88px; }.erp-header-inner { min-height: 88px; padding: 5px 12px; }.erp-col-center { flex-basis: 100%; }.erp-search-wrap { width: 100%; }.erp-search-input { height: 30px; font-size: 11px; } }

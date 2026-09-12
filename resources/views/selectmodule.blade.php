@@ -32,5 +32,8 @@
                 @endif
             </main>
         </div>
+        <footer class="module-footer">
+            Copyright © {{ date('Y') }} Surya.erp. All rights reserved.
+        </footer>
     </div>
 @endsection

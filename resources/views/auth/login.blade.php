@@ -25,6 +25,10 @@
             </div>
 
             <div class="login-form-panel">
+                <div class="login-form-intro">
+                    <div class="login-company-name"><strong>Surya</strong><span>.erp</span><small>INTELLIGENT SCHOOL OPERATIONS</small></div>
+                    <p>Welcome to your secure school management portal.</p>
+                </div>
                 <div class="company-logo-wrap">
                     <img
                         src="{{ asset('images/software_eng.png') }}"

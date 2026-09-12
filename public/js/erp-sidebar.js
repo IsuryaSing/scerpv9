@@ -1,5 +1,21 @@
 (function () {
     const sidebar = document.getElementById('erp-sidebar');
+    const menuButton = document.querySelector('.erp-menu-btn');
+
+    function setSidebar(open) {
+        document.body.classList.toggle('erp-nav-open', open);
+        menuButton?.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    menuButton?.addEventListener('click', function () {
+        setSidebar(!document.body.classList.contains('erp-nav-open'));
+    });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 900) {
+            setSidebar(false);
+        }
+    });
 
     if (!sidebar) {
         return;
