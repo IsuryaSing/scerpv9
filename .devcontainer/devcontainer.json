@@ -1,0 +1,31 @@
+{
+  "name": "scerpv9 Laravel Dev",
+  "image": "mcr.microsoft.com/devcontainers/php:1-8.2-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "forwardPorts": [8000, 5173],
+  "portsAttributes": {
+    "8000": {
+      "label": "Laravel App",
+      "onAutoForward": "openPreview"
+    },
+    "5173": {
+      "label": "Vite",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "composer install && npm install && cp -n .env.example .env && php artisan key:generate",
+  "postStartCommand": "nohup php artisan serve --host=0.0.0.0 --port=8000 > /tmp/scerpv9-laravel.log 2>&1 &",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "onecentlin.laravel-blade",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
